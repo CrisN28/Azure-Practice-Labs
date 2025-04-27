@@ -14,6 +14,5 @@ Each folder contains the corresponding ARM templates, PowerShell scripts, diagra
 
 To build practical skills in deploying, configuring, and managing Azure cloud resources through structured exercises.
 
----
 
 *Created as part of Azure certification study labs (AZ-104).*

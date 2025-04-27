@@ -36,19 +36,26 @@
 
 ## Visual references:
 
-[Virtual Machine Deployment (Initial deployment view)](./deployment-views/01-VM-deploy.png)
-[Virtual Machine View (Details of the VM)](./deployment-views/02-Virtual-Machine.png)
-[Public IP, NSG, and RDP Rule Deployment (Deploy IP and NSG)](./deployment-views/03-ip-nsg-rdp-deploy.png)
-[Public IP Address Details](./deployment-views/04-Public-IP.png)
-[Network Interface Card (NIC) Configuration](./deployment-views/05-NIC.png)
-[Network Interface Connection Status Verification](./deployment-views/06-NIC-verify.png)
-[Remote Desktop Protocol Rule (RDP) Rule Verification](./deployment-views/07-rdp-rule.png)
-[Complete Deployment Resources (All resources view)](./deployment-views/08-All-Resources.png)
+[Virtual Machine Deployment (Initial deployment view)](./07-deployment-views/01-VM-deploy.png)
+
+[Virtual Machine View (Details of the VM)](./07-deployment-views/02-Virtual-Machine.png)
+
+[Public IP, NSG, and RDP Rule Deployment (Deploy IP and NSG)](./07-deployment-views/03-ip-nsg-rdp-deploy.png)
+
+[Public IP Address Details](./07-deployment-views/04-Public-IP.png)
+
+[Network Interface Card (NIC) Configuration](./07-deployment-views/05-NIC.png)
+
+[Network Interface Connection Status Verification](./07-deployment-views/06-NIC-verify.png)
+
+[Remote Desktop Protocol Rule (RDP) Rule Verification](./07-deployment-views/07-rdp-rule.png)
+
+[Complete Deployment Resources (All resources view)](./07-deployment-views/08-All-Resources.png)
 
 
 ## Visual Diagram:
 
-[Resource Architecture Overview Diagram (PDF)](./architecture-designs/Resource-Architecture.pdf)
+[Resource Architecture Overview Diagram (PDF)](./08-architecture-designs/Resource-Architecture.pdf)
 
 
 ## Additional notes:
