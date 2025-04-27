@@ -5,3 +5,4 @@ Get-AzNetworkInterface -Name "vm-lab01-Wsrv-nic" -ResourceGroupName "RG-Labs-AZ1
 
 # Inspect the NSG rules
 Get-AzNetworkSecurityGroup -Name "nsg-lab01" -ResourceGroupName "RG-Labs-AZ104" | Select -ExpandProperty SecurityRules
+

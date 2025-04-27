@@ -35,3 +35,4 @@ $nic.NetworkSecurityGroup = $nsg
 
 # Save and implement changes
 Set-AzNetworkInterface -NetworkInterface $nic
+

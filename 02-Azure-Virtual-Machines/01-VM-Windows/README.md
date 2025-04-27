@@ -2,8 +2,8 @@
 
 ## Objectives:
 
-- Deploy a virtual machine using the ARM template `01-vm-deployment-template.json`
-- Create a parameter template to deploy the virtual machine `02-parameters-vm.json`
+- Deploy a virtual machine using the ARM template
+- Create a parameter template to deploy the virtual machine
 
 
 # Exercise 02 - Create a Public IP Address, a Network Security Group, and Associate Them with the Virtual Machine
@@ -24,14 +24,14 @@
 
 ## Templates and Scripts Used:
 
-- ARM Template for the Virtual Machine [01-vm-deployment-template.json](./01-vm-deployment-template.json)
-- Parameters Template for Virtual Machine [02-parameters-vm.json](./02-parameters-vm.json)
-- PowerShell Scripts to Deploy the Virtual Machine [03-deploy-vm.ps1](./03-deploy-vm.ps1)
+- [ARM Template for the Virtual Machine](./01-vm-deployment-template.json)
+- [Parameters Template for Virtual Machine](./02-parameters-vm.json)
+- [PowerShell Scripts to Deploy the Virtual Machine](./03-deploy-vm.ps1)
 
-- ARM Template for Public IP, NSG, and RDP Rule Association [04-ip-nsg-rdp-associate-template.json](./04-ip-nsg-rdp-associate-template.json)
-- PowerShell Script to Attach Public IP and NSG to the VM [05-deploy-associate-ip-nsg.ps1](./05-deploy-associate-ip-nsg.ps1)
+- [ARM Template for Public IP, NSG, and RDP Rule Association](./04-ip-nsg-rdp-associate-template.json)
+- [PowerShell Script to Attach Public IP and NSG to the VM](./05-deploy-associate-ip-nsg.ps1)
 
-- PowerShell Scripts to Verify Public IP and NSG Configuration [06-verifyIP-NSG.ps1](./06-verifyIP-NSG.ps1)
+- [PowerShell Script to Verify Public IP and NSG Configuration](./06-verifyIP-NSG.ps1)
 
 
 ## Visual references:

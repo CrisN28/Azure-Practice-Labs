@@ -2,7 +2,6 @@
   "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
-    // Parameters for creating Public IP and NSG 
     "location": {
       "type": "string",
       "defaultValue": "eastus"
@@ -24,7 +23,6 @@
         "name": "Basic"
       },
       "properties": {
-        // Dynamic public IP allocation for the resource
         "publicIPAllocationMethod": "Dynamic"
       }
     },
@@ -36,7 +34,6 @@
       "properties": {
         "securityRules": [
           {
-            // Rule to allow RDP connection (port 3389)
             "name": "allow-rdp",
             "properties": {
               "protocol": "Tcp",
