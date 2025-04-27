@@ -1,0 +1,12 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+      "vmName": { "value": "vm-lab01-Wsrv" },
+      "adminUsername": { "value": "adminazure" },
+      "adminPassword": { "value": "P@ssword12345!" },
+      "vnetName": { "value": "Labs-Network" },
+      "subnetName": { "value": "Subnet01" },
+      "vmSize": { "value": "Standard_B1s" }
+    }
+  }
