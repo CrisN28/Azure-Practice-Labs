@@ -2,24 +2,24 @@
 
 ## Objectives:
 
-- Deploy a virtual machine using the ARM template
-- Create a parameter template to deploy the virtual machine
+- Deploy a virtual machine using the ARM template.
+- Create a parameter template to deploy the virtual machine.
 
 
 # Exercise 02 - Create a Public IP Address, a Network Security Group, and Associate Them with the Virtual Machine
  
 ## Objectives:
 
-- Set up a dynamic public IP address and link it to the virtual machine’s network interface
-- Configure a Network Security Group (NSG) with rules that allow RDP access (port 3389) for the virtual machine
+- Set up a dynamic public IP address and link it to the virtual machine’s network interface.
+- Configure a Network Security Group (NSG) with rules that allow RDP access (port 3389) for the virtual machine.
 
 
 ## Learning Outcomes:
 
-- Developed expertise in linking public IPs and NSGs to NICs to create secure connections
-- Understood the process of associating public IPs and network security groups (NSGs) with network interfaces (NICs)
-- Developed well-organized and efficient scripts for Azure resource management
-- Practiced using commands to audit configurations and validate security rules
+- Developed expertise in linking public IPs and NSGs to NICs to create secure connections.
+- Understood the process of associating public IPs and network security groups (NSGs) with network interfaces (NICs).
+- Developed well-organized and efficient scripts for Azure resource management.
+- Practiced using commands to audit configurations and validate security rules.
 
 
 ## Templates and Scripts Used:
@@ -60,6 +60,8 @@
 
 ## Additional notes:
 
-- Pre-existing network and subnet: The virtual network (Labs-Network) and the subnet (Subnet01) were set up in a prior exercise and are used in this one
+>[!IMPORTANT]
+>- Pre-existing network and subnet: The virtual network (Labs-Network) and the subnet (Subnet01) were set up in a prior exercise and are used in this one.
 
-- Security best practices: RDP access rules should never allow universal access in production setups, as this opens the system to critical security threats
+>[!CAUTION]
+>- Security best practices: RDP access rules should never allow universal access in production setups, as this opens the system to critical security threats.

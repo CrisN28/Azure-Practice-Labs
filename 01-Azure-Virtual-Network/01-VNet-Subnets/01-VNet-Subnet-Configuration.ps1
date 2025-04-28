@@ -1,5 +1,4 @@
 # Create a resource group
-# This resource group will be used in most exercises
 New-AzResourceGroup -Name "RG-Labs-AZ104" -Location "EastUS"
 
 

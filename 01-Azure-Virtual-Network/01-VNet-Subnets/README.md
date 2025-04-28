@@ -16,11 +16,11 @@
 ## Script Used:
 
 
-[VNet-Subnet-Configuration.ps1](./VNet-Subnet-Configuration.ps1)
+[**Resource Group, VNet and Subnets Deployment**](./01-VNet-Subnet-Configuration.ps1)
 
 
 ## Screenshots and Diagrams:
 
-[Azure Network View](./Network-Snapshot.png)
+[**Azure Network View**](./02-Network-Snapshot.png)
 
-[Network Diagram](./Network-Diagram.pdf)
+[**Network Diagram**](./03-Network-Diagram.pdf)
