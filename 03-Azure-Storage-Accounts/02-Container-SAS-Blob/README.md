@@ -12,9 +12,9 @@ Additionally, the exercise includes:
 
 ## Objectives - Exercise 01:
 
-- Deploy a **private blob container** in Azure using an ARM template
-- Configure restricted access to ensure security
-- Use **04-storage-container-template.json** and **05-storage-container-parameters.json** for automated deployment
+- Deploy a **private blob container** in Azure using an ARM template with restricted access 
+- Configure restricted access to ensure security  
+- Automate deployment using Infrastructure-as-Code principles with ARM templates  
 
 <br>
 

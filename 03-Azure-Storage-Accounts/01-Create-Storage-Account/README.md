@@ -23,9 +23,9 @@ It describes how to provision storage resources using infrastructure-as-code pri
 
 ## Templates and Scripts Used:
 
-1- [ARM Template for the Storage Account](./01-storage-account-template.json)                                    
-2- [Parameters Template for Storage Account](./02-storage-account-parameters.json)                         
-3- [PowerShell Scripts to Deploy the Storage Account](./03-deploy-storage-account.ps1)                    
+1 - [ARM Template for the Storage Account](./01-storage-account-template.json)                                    
+2 - [Parameters Template for Storage Account](./02-storage-account-parameters.json)                         
+3 - [PowerShell Scripts to Deploy the Storage Account](./03-deploy-storage-account.ps1)                    
 
 
 ## Visual references:
