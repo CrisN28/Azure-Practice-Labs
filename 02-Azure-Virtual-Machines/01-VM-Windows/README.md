@@ -1,18 +1,20 @@
 # Exercise 01 - Create and Deploy a Virtual Machine
 
-## Objectives:
+## Objectives - Exercise 01:
 
 - Deploy a virtual machine using the ARM template.
 - Create a parameter template to deploy the virtual machine.
 
+<br>
 
 # Exercise 02 - Create a Public IP Address, a Network Security Group, and Associate Them with the Virtual Machine
  
-## Objectives:
+## Objectives - Exercise 02:
 
 - Set up a dynamic public IP address and link it to the virtual machine’s network interface.
 - Configure a Network Security Group (NSG) with rules that allow RDP access (port 3389) for the virtual machine.
 
+<br>
 
 ## Learning Outcomes:
 
@@ -65,3 +67,7 @@
 
 >[!CAUTION]
 >- Security best practices: RDP access rules should never allow universal access in production setups, as this opens the system to critical security threats.
+
+
+## Project Status:
+![Completed](https://img.shields.io/badge/Status-Completed-brightgreen)
