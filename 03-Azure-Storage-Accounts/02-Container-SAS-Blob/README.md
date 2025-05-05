@@ -12,15 +12,19 @@ Additionally, the exercise includes:
 
 ## Objectives - Exercise 01:
 
-- Deploy a **private blob container** in Azure using an ARM template with restricted access 
-- Configure restricted access to ensure security  
+- Deploy a **private blob container** in Azure using an ARM template with restricted access   
 - Automate deployment using Infrastructure-as-Code principles with ARM templates  
+- Configure restricted access to ensure security
 
 <br>
 
 # Exercise 02 - Generate a SAS Token and Upload an Image 
 
 ## Objectives - Exercise 02:
+
+- Generate a **SAS token** to allow controlled access to a private container  
+- Securely upload an **image** (blob) to the storage account using SAS authentication    
+- Apply security and access control best practices in Azure Storage   
 
 <br>
 
