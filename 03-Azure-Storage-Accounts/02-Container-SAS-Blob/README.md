@@ -26,7 +26,6 @@ Additionally, the exercise includes:
 - Securely upload an **image** (blob) to the storage account using SAS authentication    
 - Apply security and access control best practices in Azure Storage   
 
-<br>
 
 ## Learning Outcomes:
 
@@ -35,31 +34,45 @@ Additionally, the exercise includes:
 - Execute secure data transfers by uploading a **blob (image) using SAS authentication**     
 - Learn how to effectively configure **Azure Storage access policies** to safeguard critical data and resources  
 
+<br>
 
 ## Templates and Scripts Used:
 
 1 - [ARM Template for Private Container](./04-storage-container-template.json)                                
 2 - [Parameters Template for Private Container Deployment](./05-storage-container-parameters.json)                
-3 - [PowerShell Script to Deploy Private Conatiner](./06-deploy-storage-container.ps1)                            
-4 - [PowerShell Script to Generate SAS Token and Upload an Imager](./07-sas_token_upload_blob.ps1)                      
+3 - [PowerShell Script to Deploy Private Container](./06-deploy-storage-container.ps1)                            
+4 - [PowerShell Script to Generate SAS Token and Upload an Image](./07-sas-token-upload-blob.ps1)                      
 
+<br>
 
 ## Visual references:
 
-- [Private Blob Container Details](./container-views/01-private-container-details.png)
-- [Azure Portal View of Private Container](./container-views/02-container-portal-view.png)
-- [Blob Upload Details](./container-views/03-blob-upload-details.png)
-- [Azure Portal View of Uploaded Blob](./container-views/04-uploaded-blob-portal-view.png)
-- [Uploaded Blob File (Image)](./container-views/image01.png)
+- [Private Blob Container Details](./blob-container-views/01-private-container-details.png)
+- [Azure Portal View of Private Container](./blob-container-views/02-container-portal-view.png)
+- [Blob Upload Details](./blob-container-views/03-blob-upload-details.png)
+- [Azure Portal View of Uploaded Blob](./blob-container-views/04-uploaded-blob-portal-view.png)
+- [Uploaded Blob File (Image)](./blob-container-views/image01.png)
 
 
 ## Visual Diagram:
 
-- [Azure Blob Container Deployment and SAS Authentication (PDF)](./container-views/sas-container-architecture.pdf)
+- [Azure Blob Container Deployment and SAS Authentication (PDF)](./secure-container-architecture/sas-container-architecture.pdf)
 
+<br>
+
+## Additional notes:
+
+>[!IMPORTANT]
+> This exercise was built using a pre-existing [Storage Account](/03-Azure-Storage-Accounts/01-Create-Storage-Account)          
+
+>[!TIP]
+> For enhanced security, consider integrating with Azure Key Vault to securely manage and rotate your keys                
+
+>[!CAUTION]
+> Never expose storage account keys in production. Use RBAC roles or restricted SAS tokens instead                    
+
+<br>
 
 ## Project Status:
 
-![Project Status](https://img.shields.io/badge/status-in%20progress-yellow)
-
-> This project is a work in progress. Updates will be made regularly.
+![Completed](https://img.shields.io/badge/Status-Completed-brightgreen)

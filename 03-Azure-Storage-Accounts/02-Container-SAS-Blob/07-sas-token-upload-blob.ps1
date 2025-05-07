@@ -7,10 +7,12 @@ $storageAccountName = "storagelabs2025"
 
 
 # Retrieve storage account access key
+# It uses the storage account key for full access to the container's permissions
 $key = (Get-AzStorageAccountKey -ResourceGroupName $resourceGroupName -Name $storageAccountName)[0].Value
 
 
 # Create storage context using the retrieved key
+# This context (admin-level authentication) is required to generate the SAS token
 $context = New-AzStorageContext -StorageAccountName $storageAccountName -StorageAccountKey $key
 
 
@@ -19,9 +21,8 @@ $startTime = Get-Date
 $expiryTime = $startTime.AddHours(1)
 
 
-# Generate SAS token for the container with read/write permissions
-# This context (admin-level authentication) is required to generate the SAS token.
-# It uses the storage account key for full access to the container's permissions.
+# Generate SAS token for the container with read/write permissions         
+# The account key is required to generate the first SAS token for secure access            
 $containerSASToken = New-AzStorageContainerSASToken `
   -Name $containerName `
   -Context $context `
@@ -37,7 +38,7 @@ Write-Output $containerSASToken
 # ===================================== Upload File to Container with SAS Token =========================================== #
 
 # Define local file parameters
-$filePath = "blob-image/image01.png"    # Path to the local file
+$filePath = "blob-container-views/image01.png"    # Path to the local file
 $blobName = "image1.png"                # Destination name for the blob in the container
 
 
