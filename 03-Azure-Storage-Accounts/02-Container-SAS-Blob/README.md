@@ -55,6 +55,7 @@ Additionally, the exercise includes:
 
 ## Visual Diagram:
 
+- [Azure Blob Container Deployment and SAS Authentication (PDF)](./container-views/sas-container-architecture.pdf)
 
 
 ## Project Status:
