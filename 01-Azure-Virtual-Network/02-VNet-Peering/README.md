@@ -27,12 +27,15 @@
 - Learn to retrieve resource properties (such as `.Id`) via `Get-AzVirtualNetwork`
 - Identify and prevent IP address range overlaps between networks to ensure proper connectivity
 
+<br>
 
 ## Script Used:
 
+1- [Deploy a VNet with two subnets (PowerShell)](./01-VNet-Subnets-Deploy.ps1)  
+2- [PowerShell script to set up virtual network peering](./02-VNet-Peering-Setup.ps1)
 
-[](./)
 
+<br>
 
 ## Screenshots and Diagrams:
 
