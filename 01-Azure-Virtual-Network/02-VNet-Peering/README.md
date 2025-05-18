@@ -53,8 +53,9 @@
 ## Additional notes:
 
 >[!NOTE]
-> Remember to remove the virtual network peering before deleting the VNets to avoid dependency errors.
-
+> Both virtual networks are deployed in the same region `EastUS` to simplify the peering exercise and avoid cross-region data transfer costs.                   
+> Also, Remember to remove the virtual network peering before deleting the VNets to avoid dependency errors.
+ 
 >[!TIP]
 > To monitor and validate connectivity, enable Azure Network Watcher in EastUS and use the Connection Monitor without needing VMs.
 
