@@ -1,6 +1,6 @@
 # Exercise 01 - Creating a virtual network with two subnets
 
-## Objetives:
+## Objectives:
 
 - Create a resource group named `RG-Labs-AZ104`
 - Deploy a virtual network with two subnets using PowerShell
