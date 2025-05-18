@@ -1,6 +1,6 @@
 # Exercise 01 - Creating a virtual network with two subnets
 
-## Objectives:
+## Objetives:
 
 - Create a resource group named `RG-Labs-AZ104`
 - Deploy a virtual network with two subnets using PowerShell
@@ -16,11 +16,11 @@
 ## Script Used:
 
 
-[**Resource Group, VNet and Subnets Deployment**](./01-VNet-Subnet-Configuration.ps1)
+[**Resource Group, VNet and Subnets Deployment**](./01-Create-VNet-Subnets.ps1)
 
 
 ## Screenshots and Diagrams:
 
-[**Azure Network View**](./02-Network-Snapshot.png)
+[**Azure Network View**](vnet1-subnets-views/01-Network-Snapshot.png)
 
-[**Network Diagram**](./03-Network-Diagram.pdf)
+[**Network Diagram**](vnet1-subnets-views/02-Network-Diagram.pdf)
