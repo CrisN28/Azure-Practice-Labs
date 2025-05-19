@@ -11,6 +11,6 @@ $parametersFile = "02-deploy-linux-vm-params.json"
 
 # Deploy the resources defined in the ARM template to the specified resource group
 New-AzResourceGroupDeployment `
-  -ResourceGroupName "RG-Labs-AZ104" `  
-  -TemplateFile $templateFile `         
+  -ResourceGroupName "RG-Labs-AZ104" `
+  -TemplateFile $templateFile `
   -TemplateParameterFile $parametersFile
