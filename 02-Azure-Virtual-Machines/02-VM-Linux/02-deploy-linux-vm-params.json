@@ -1,0 +1,14 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "vmName": {"value": "vm-linux02"},
+    "adminUsername": {"value": "azureuser"},
+    "adminPassword": {"value": "Password12345!"},
+    "virtualNetworkName": {"value": "Labs-Network02"},
+    "subnetName": {"value": "SubnetA"},
+    "networkInterfaceName": {"value": "vm-linux02-nic"},
+    "networkSecurityGroupName": {"value": "vm-linux02-nsg"},
+    "location": {"value": "EastUS"}
+  }
+}
