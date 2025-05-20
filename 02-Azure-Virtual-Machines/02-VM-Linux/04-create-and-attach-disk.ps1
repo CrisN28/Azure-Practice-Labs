@@ -10,7 +10,7 @@ $diskConfig = New-AzDiskConfig `
   -Location $location `
   -CreateOption Empty `
   -DiskSizeGB $diskSizeGB `
-  -SkuName StandardHDD_LRS
+  -SkuName StandardSSD_LRS
 
 $disk = New-AzDisk `
   -ResourceGroupName $resourceGroup `
