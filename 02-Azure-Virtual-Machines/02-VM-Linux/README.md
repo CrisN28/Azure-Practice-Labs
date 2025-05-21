@@ -22,12 +22,22 @@
 
 ## Learning Outcomes :
 
+- Understand how to deploy a Linux virtual machine in Azure using ARM templates (template + parameters)                               
+- Use PowerShell to automate Azure resource deployments                                                                        
+- Create and configure an additional managed data disk in Azure                                                       
+- Attach a new disk to an existing virtual machine using PowerShell                                            
+- Validate that the disk was correctly attached to the virtual machine using PowerShell queries                             
+- Identify the necessary steps inside the virtual machine to prepare a new disk                                                
 
-
+<br>
 
 ## Templates and Scripts Used :
 
-
+1- [ARM template for the Linux VM](./01-deploy-linux-vm-template.json)                                                                         
+2- [Parameter file for the VM template](./02-deploy-linux-vm-params.json)                                                                                  
+3- [PowerShell script to deploy the VM using ARM template](./03-deployment-vm-linux.ps1)                                                                 
+4- [PowerShell script to create and attach a managed disk](./04-create-and-attach-disk.ps1)                                                                
+5- [PowerShell script to query VM disks](./05-vm-linux-disk-query.ps1)                                                                             
 
 ## Portal Screenshots and Outputs :
 
@@ -44,15 +54,6 @@
 >- The resource group `RG-Labs-AZ104`
 >- The virtual network `Labs-Network02`
 >- La subred `SubnetA`
-
-
->[!IMPORTANT]
->-
-
-
->[!CAUTION]
->-
-
 
 
 ## Project Status :
