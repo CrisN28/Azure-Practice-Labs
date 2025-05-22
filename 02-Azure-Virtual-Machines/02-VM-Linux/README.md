@@ -53,7 +53,7 @@
 
 ## Visual Diagram : 
 
-in progress
+[Architecture diagram of Linux VM deployment and disk attachment process](07-vm-deployment-diagram/linux-vm-architecture.pdf)
 
 <br>
 
@@ -80,7 +80,4 @@ in progress
 
 
 ## Project Status :
-
-![Project Status](https://img.shields.io/badge/status-in%20progress-yellow)
-
-> This project is a work in progress. Updates will be made regularly.
+![Completed](https://img.shields.io/badge/Status-Completed-brightgreen)
