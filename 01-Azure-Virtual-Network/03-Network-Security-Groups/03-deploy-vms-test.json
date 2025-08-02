@@ -55,7 +55,7 @@
         "osProfile": {
           "computerName": "VM-Subnet01",
           "adminUsername": "azureuser",
-          "adminPassword": "P@ssword1234!"
+          "adminPassword": "P@ssword2025CR!"
         },
         "storageProfile": {
           "imageReference": {
