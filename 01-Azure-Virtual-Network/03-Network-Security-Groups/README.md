@@ -72,7 +72,15 @@
 
 <br>
 
-## Scripts Used:
+## Templates and Scripts Used:
+
+1- [ARM Template - Block Traffic from SubnetA to Subnet01](./01-nsg-block-subneta.json)                                                           
+2- [Deploy NSG and Rule Check](./02-deploy-nsg-check.ps1)                                                                      
+3- [ARM Template - VMs in subnet01 and subnetA](./03-vms-subnets-arm.json)                                                                         
+4- [Deploy VMs and Test Connection](./04-deploy-vms-connec-test.ps1)                                                                   
+5- [ARM Template - VM in subnet02](./05-vm-subnet02-arm.json)                                                                              
+6- [Deploy VM with SSH IP Filter](./06-deploy-vm-ssh-ipfilter.ps1)                                                               
+7- [Deny Egress HTTP/HTTPS Rule](./07-deny-egress-http-https.ps1)                                                               
 
 
 ## Portal Screenshots and Outputs:
