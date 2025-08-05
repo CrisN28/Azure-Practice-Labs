@@ -1,0 +1,14 @@
+{
+  "location": {
+    "value": "eastus"
+  },
+  "vmSize": {
+    "value": "Standard_B1s"
+  },
+  "adminUsername": {
+    "value": "azureadminuser"
+  },
+  "adminPassword": {
+    "value": "G7#p9!r2X"
+  }
+}
