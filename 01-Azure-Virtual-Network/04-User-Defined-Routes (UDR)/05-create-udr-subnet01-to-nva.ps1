@@ -1,3 +1,5 @@
+# This script creates a route table and a custom route for the "subnet01".
+
 # Variables
 $rg = "RG-Labs-AZ104"
 $routeTableName = "UDR-Subnet01-to-NVA"

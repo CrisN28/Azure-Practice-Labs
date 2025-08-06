@@ -1,3 +1,5 @@
+# This script creates a new subnet named "nva-subnet" as part of the first exercise.
+
 # Variables
 $rg = "RG-Labs-AZ104"
 $vnetName = "Labs-Network"

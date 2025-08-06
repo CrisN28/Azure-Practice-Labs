@@ -1,7 +1,13 @@
+# This script creates a route table and a custom route for the "subnet02".
+
 # Variables
+$rg = "RG-Labs-AZ104"
+$location = "eastus"
+$vnetName = "Labs-Network"
 $routeTableNameReturn = "UDR-Subnet02-to-NVA"
 $subnetNameReturn = "subnet02"
-$addressPrefixReturn = "10.0.1.0/24"  # subnet01 prefix
+$nvaIp = "10.0.3.4"                    # subnet03 prefix
+$addressPrefixReturn = "10.0.1.0/24"   # subnet01 prefix
 
 # 1. Create the route table for subnet02 and save the object
 $routeTableReturn = New-AzRouteTable -ResourceGroupName $rg -Name $routeTableNameReturn -Location $location
