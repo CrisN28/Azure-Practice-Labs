@@ -1,0 +1,28 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "location": {
+      "value": "East US"
+    },
+    "appGatewayName": {
+      "value": "appGatewayLab"
+    },
+    "vnetName": {
+      "value": "Labs-Network"
+    },
+    "subnetName": {
+      "value": "subnet-gateway"
+    },
+    "publicIpName": {
+      "value": "appGatewayPublicIP"
+    },
+    "backendIPAddresses": {
+      "value": [
+        "10.0.4.6", 
+        "10.0.4.4",
+        "10.0.4.5"
+      ]
+    }
+  }
+}

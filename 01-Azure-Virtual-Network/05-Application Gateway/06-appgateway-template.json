@@ -1,0 +1,258 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "location": { "type": "string" },
+    "appGatewayName": { "type": "string" },
+    "vnetName": { "type": "string" },
+    "subnetName": { "type": "string" },
+    "publicIpName": { "type": "string" },
+    "backendIPAddresses": {
+      "type": "array"
+    }
+  },
+  "resources": [
+    {
+      "type": "Microsoft.Network/publicIPAddresses",
+      "apiVersion": "2022-01-01",
+      "name": "[parameters('publicIpName')]",
+      "location": "[parameters('location')]",
+      "sku": { "name": "Standard" },
+      "properties": {
+        "publicIPAllocationMethod": "Static"
+      }
+    },
+    {
+      "type": "Microsoft.Network/applicationGateways",
+      "apiVersion": "2022-09-01",
+      "name": "[parameters('appGatewayName')]",
+      "location": "[parameters('location')]",
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIpName'))]"
+      ],
+      "properties": {
+        "sku": {
+          "name": "Standard_v2",
+          "tier": "Standard_v2",
+          "capacity": 1
+        },
+        "gatewayIPConfigurations": [
+          {
+            "name": "appGatewayIpConfig",
+            "properties": {
+              "subnet": {
+                "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('vnetName'), parameters('subnetName'))]"
+              }
+            }
+          }
+        ],
+        "frontendIPConfigurations": [
+          {
+            "name": "appGatewayFrontendIP",
+            "properties": {
+              "publicIPAddress": {
+                "id": "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIpName'))]"
+              }
+            }
+          }
+        ],
+        "frontendPorts": [
+          {
+            "name": "httpPort",
+            "properties": {
+              "port": 80
+            }
+          }
+        ],
+        "probes": [
+          {
+            "name": "clientsProbe",
+            "properties": {
+              "protocol": "Http",
+              "host": "localhost",
+              "path": "/",
+              "interval": 30,
+              "timeout": 30,
+              "unhealthyThreshold": 3,
+              "pickHostNameFromBackendHttpSettings": false,
+              "minServers": 0,
+              "match": {
+                "statusCodes": [ "200-399" ]
+              }
+            }
+          },
+          {
+            "name": "employeesProbe",
+            "properties": {
+              "protocol": "Http",
+              "host": "localhost",
+              "path": "/",
+              "interval": 30,
+              "timeout": 30,
+              "unhealthyThreshold": 3,
+              "pickHostNameFromBackendHttpSettings": false,
+              "minServers": 0,
+              "match": {
+                "statusCodes": ["200-399"]
+              }
+            }
+          },
+          {
+            "name": "billingProbe",
+            "properties": {
+              "protocol": "Http",
+              "host": "localhost",
+              "path": "/",
+              "interval": 30,
+              "timeout": 30,
+              "unhealthyThreshold": 3,
+              "pickHostNameFromBackendHttpSettings": false,
+              "minServers": 0,
+              "match": {
+                "statusCodes": ["200-399"]
+              }
+            }
+          }
+        ],
+        "backendAddressPools": [
+          {
+            "name": "clientsPool",
+            "properties": {
+              "backendAddresses": [
+                { "ipAddress": "[parameters('backendIPAddresses')[0]]" }
+              ]
+            }
+          },
+          {
+            "name": "employeesPool",
+            "properties": {
+              "backendAddresses": [
+                { "ipAddress": "[parameters('backendIPAddresses')[1]]" }
+              ]
+            }
+          },
+          {
+            "name": "billingPool",
+            "properties": {
+              "backendAddresses": [
+                { "ipAddress": "[parameters('backendIPAddresses')[2]]" }
+              ]
+            }
+          }
+        ],
+        "backendHttpSettingsCollection": [
+          {
+            "name": "clientsSettings",
+            "properties": {
+              "port": 80,
+              "protocol": "Http",
+              "probe": {
+                "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('appGatewayName')), '/probes/clientsProbe')]"
+              }
+            }
+          },
+          {
+            "name": "employeesSettings",
+            "properties": {
+              "port": 80,
+              "protocol": "Http",
+              "probe": {
+                "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('appGatewayName')), '/probes/employeesProbe')]"
+              }
+            }
+          },
+          {
+            "name": "billingSettings",
+            "properties": {
+              "port": 80,
+              "protocol": "Http",
+              "probe": {
+                "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('appGatewayName')), '/probes/billingProbe')]"
+              }
+            }
+          }
+        ],
+        "httpListeners": [
+          {
+            "name": "httpListener",
+            "properties": {
+              "frontendIPConfiguration": {
+                "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('appGatewayName')), '/frontendIPConfigurations/appGatewayFrontendIP')]"
+              },
+              "frontendPort": {
+                "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('appGatewayName')), '/frontendPorts/httpPort')]"
+              },
+              "protocol": "Http"
+            }
+          }
+        ],
+        "urlPathMaps": [
+          {
+            "name": "pathMap",
+            "properties": {
+              "defaultBackendAddressPool": {
+                "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('appGatewayName')), '/backendAddressPools/clientsPool')]"
+              },
+              "defaultBackendHttpSettings": {
+                "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('appGatewayName')), '/backendHttpSettingsCollection/clientsSettings')]"
+              },
+              "pathRules": [
+                {
+                  "name": "clientsRule",
+                  "properties": {
+                    "paths": ["/clients/"],
+                    "backendAddressPool": {
+                      "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('appGatewayName')), '/backendAddressPools/clientsPool')]"
+                    },
+                    "backendHttpSettings": {
+                      "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('appGatewayName')), '/backendHttpSettingsCollection/clientsSettings')]"
+                    }
+                  }
+                },
+                {
+                  "name": "employeesRule",
+                  "properties": {
+                    "paths": ["/employees/"],
+                    "backendAddressPool": {
+                      "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('appGatewayName')), '/backendAddressPools/employeesPool')]"
+                    },
+                    "backendHttpSettings": {
+                      "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('appGatewayName')), '/backendHttpSettingsCollection/employeesSettings')]"
+                    }
+                  }
+                },
+                {
+                  "name": "billingRule",
+                  "properties": {
+                    "paths": ["/billing/"],
+                    "backendAddressPool": {
+                      "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('appGatewayName')), '/backendAddressPools/billingPool')]"
+                    },
+                    "backendHttpSettings": {
+                      "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('appGatewayName')), '/backendHttpSettingsCollection/billingSettings')]"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "requestRoutingRules": [
+          {
+            "name": "routingRule",
+            "properties": {
+              "priority": 1,
+              "ruleType": "PathBasedRouting",
+              "httpListener": {
+                "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('appGatewayName')), '/httpListeners/httpListener')]"
+              },
+              "urlPathMap": {
+                "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('appGatewayName')), '/urlPathMaps/pathMap')]"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

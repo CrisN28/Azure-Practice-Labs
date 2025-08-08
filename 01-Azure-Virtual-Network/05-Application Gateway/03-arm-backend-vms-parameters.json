@@ -1,0 +1,12 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "location": { "value": "East US" },
+    "vmCount": { "value": 3 },
+    "vnetName": { "value": "Labs-Network" },
+    "subnetName": { "value": "subnet-backend" },
+    "adminUsername": { "value": "azureadminuser" },
+    "adminPassword": { "value": "xRbm_2025CRS" }
+  }
+}
