@@ -1,0 +1,30 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "vmName1": {
+      "value": "webserver"
+    },
+    "vmName2": {
+      "value": "dbserver"
+    },
+    "adminUsername": {
+      "value": "azureuser"
+    },
+    "adminPassword": {
+      "value": "Kgb6#2Xsh9b"
+    },
+    "virtualNetworkName": {
+      "value": "Labs-Network02"
+    },
+    "subnetName1": {
+      "value": "SubnetA"
+    },
+    "subnetName2": {
+      "value": "SubnetB"
+    },
+    "location": {
+      "value": "eastus"
+    }
+  }
+}
