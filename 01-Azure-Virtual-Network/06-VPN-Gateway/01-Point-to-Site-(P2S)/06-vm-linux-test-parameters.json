@@ -1,0 +1,11 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "vmName": { "value": "VMlinux-test" },
+    "adminUsername": { "value": "azureadminuser" },
+    "adminPassword": { "value": "Ahv5#0fcnT" },
+    "location": { "value": "East US" },
+    "networkSecurityGroupName": { "value": "NSG-Linux-VM" }
+  }
+}
