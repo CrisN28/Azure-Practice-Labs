@@ -1,0 +1,33 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "loadBalancerName": {
+      "value": "internal-lb"
+    },
+    "location": {
+      "value": "eastus"
+    },
+    "virtualNetworkName": {
+      "value": "Labs-Network02"
+    },
+    "subnetName": {
+      "value": "SubnetB"
+    },
+    "frontendIPName": {
+      "value": "internal-frontend-ip"
+    },
+    "frontendIP": {
+      "value": "10.1.2.10"
+    },
+    "backendPoolName": {
+      "value": "internal-backendPool"
+    },
+    "loadBalancingRuleName": {
+      "value": "internal-lb-Rule"
+    },
+    "probeName": {
+      "value": "internal-health-Probe"
+    }
+  }
+}
