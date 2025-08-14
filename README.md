@@ -4,9 +4,10 @@ This repository contains a collection of hands-on exercises and projects related
 
 ## Lab Index
 
-- [**01-Azure-Virtual-Network**](./01-Azure-Virtual-Network/) : Creating and configuring Azure virtual networks and subnets.
-- [**02-Azure-Virtual-Machines**](./02-Azure-Virtual-Machines/): Deploying and managing Azure virtual machines.
-- [**03-Azure-Storage-Accounts**](./03-Azure-Storage-Accounts/): Setting up and securing Azure storage accounts.
+
+- [**02-Azure-Networking**](./02-Azure-Networking/) : Creating and configuring Azure networking components such as VNets, subnets, peering, and more.
+- [**03-Azure-Virtual-Machines**](./03-Azure-Virtual-Machines/): Deploying and managing Azure virtual machines.
+- [**04-Azure-Storage**](./04-Azure-Storage/): Setting up and securing Azure storage services such as Blob containers, file shares, and other storage account features.
 
 Each folder contains the corresponding ARM templates, PowerShell scripts, diagrams, and step-by-step instructions.
 
