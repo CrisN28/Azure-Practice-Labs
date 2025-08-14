@@ -1,0 +1,30 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "vmName": {
+      "value": "VM-SubnetA"
+    },
+    "adminUsername": {
+      "value": "azureadminuser"
+    },
+    "adminPassword": {
+      "value": "MT0#1dgsXjp"
+    },
+    "vmSize": {
+      "value": "Standard_B1s"
+    },
+    "subnetName": {
+      "value": "SubnetA"
+    },
+    "vnetName": {
+      "value": "Labs-Network02"
+    },
+    "osVersion": {
+      "value": "2019-Datacenter"
+    },
+    "location": {
+      "value": "EastUS"
+    }
+  }
+}
