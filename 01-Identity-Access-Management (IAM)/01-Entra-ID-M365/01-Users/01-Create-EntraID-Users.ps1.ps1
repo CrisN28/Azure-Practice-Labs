@@ -1,0 +1,1 @@
+New-MgUser -DisplayName "laura.martinez" -UserPrincipalName "laura@pruebajgo2025hotmail.onmicrosoft.com" -AccountEnabled:$true -PasswordProfile @{ForceChangePasswordNextSignIn=$true; Password="P@ssword123"} -MailNickname "laura"
