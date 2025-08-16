@@ -6,10 +6,10 @@ Get-MgUser -Filter "userPrincipalName eq 'user@dominio.com'" | Select-Object Id,
 Get-MgGroup -Filter "DisplayName eq 'group name'" | Select-Object Id
 
 # Group IDs
-$groupFinance = "ee760d1d-4b6b-4816-b13e-09b8fdbbfbc8"
-$groupHR      = "5c90c0aa-53c2-4c75-ad93-6f10ca9a50d1"
-$groupIT      = "c4ccfc9e-a4c9-4091-921c-46e9fd9b8287"
-$groupSupport = "bef8c345-4bb5-47f4-96e9-ed6d6e88c52a"
+$groupFinance = "2a978483-c932-4746-99b5-e2e053a204ed"
+$groupHR      = "199dce0c-dd47-4d04-8454-37068bb590c3"
+$groupIT      = "0234c79a-5e51-45d5-b6e8-3dde57a9e807"
+$groupSupport = "cade1cad-a49c-461e-899f-3f57bc7e54ef"
 
 # Users IDs
 $users = @(
