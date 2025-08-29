@@ -1,0 +1,15 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "rgName": { "value": "RG-Labs-AZ104" },
+    "location": { "value": "EastUS" },
+    "vmName": { "value": "VM-Windows-Restored" },
+    "subnetName": { "value": "Subnet02" },
+    "vnetName": { "value": "Labs-Network" },
+    "nsgName": { "value": "NSG-RDP" },
+    "diskName": { "value": "Disk-Restored-VM-Windows" },
+    "adminUsername": { "value": "azurelabWadmin" },
+    "adminPassword": { "value": "jxbwxh_7jxxhs" }
+  }
+}
