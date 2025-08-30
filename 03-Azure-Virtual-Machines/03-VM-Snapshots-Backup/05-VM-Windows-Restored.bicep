@@ -50,7 +50,7 @@ resource subnet 'Microsoft.Network/virtualNetworks/subnets@2022-09-01' existing 
 }
 
 // Disk existing (snapshot -> created disk) in the same resource group
-resource restoredDisk 'Microsoft.Compute/disks@2023-04-01' existing = {
+resource restoredDisk 'Microsoft.Compute/disks@2022-07-02' existing = {
   scope: resourceGroup(rgName)
   name: diskName
 }

@@ -8,8 +8,6 @@
     "subnetName": { "value": "Subnet02" },
     "vnetName": { "value": "Labs-Network" },
     "nsgName": { "value": "NSG-RDP" },
-    "diskName": { "value": "Disk-Restored-VM-Windows" },
-    "adminUsername": { "value": "azurelabWadmin" },
-    "adminPassword": { "value": "jxbwxh_7jxxhs" }
+    "diskName": { "value": "Disk-Restored-VM-Windows" }
   }
 }
